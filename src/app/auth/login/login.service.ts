@@ -23,7 +23,7 @@ export class LoginService {
       .subscribe(
         (res) => {
           this.jwt = { token: res.token }; // Extract the token from the response and assign it to jwt
-          alert('Login successful');
+          alert('Login successful! Here is your JWT: ' + this.jwt);
         },
         (error) => {
           alert('Error occurred during login');
